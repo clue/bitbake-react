@@ -1,0 +1,21 @@
+{
+    "name": "clue/bitbake-react",
+    "description": "Programmatically control your bitbake build shell",
+    "keywords": ["Bitbake", "build", "environment", "compile", "ReactPHP", "async"],
+    "homepage": "https://github.com/clue/php-bitbake-react",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lück",
+            "email": "christian@lueck.tv"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "clue/shell-react": "~0.1.0",
+        "react/event-loop": "~0.3.0|~0.4.0"
+    },
+    "autoload": {
+        "psr-4": { "Clue\\React\\Bitbake\\": "src/" }
+    }
+}
