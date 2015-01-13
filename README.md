@@ -6,8 +6,8 @@ Programmatically control your [bitbake](https://github.com/openembedded/bitbake)
 
 ## Quickstart example
 
-Once [installed](#install), you can use the following code to access the
-Docker API of your local docker daemon:
+Once [installed](#install), you can use the following code to tell bitbake to
+build the linux kernel:
 
 ```php
 $loop = React\EventLoop\Factory::create();
