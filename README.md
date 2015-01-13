@@ -11,13 +11,15 @@ Docker API of your local docker daemon:
 
 ```php
 $loop = React\EventLoop\Factory::create();
-$factory = new Factory($loop);
-$client = $factory->createClient();
+$launcher = new Launcher($loop);
+$launcher->setBinSsh('my-build-hostname.local', '~/path/to/bitbake');
+$shell = $launcher->launchInteractiveShell();
 
-$client->version()->then(function ($version) {
-    var_dump($version);
+$shell->build('linux')->then(function ($output) {
+     echo 'Successfully compiled: ' . $output . PHP_EOL;
 });
 
+$shell->end();
 $loop->run();
 ```
 
